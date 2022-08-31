@@ -70,6 +70,9 @@ namespace TelegramBotWithConsole
                     
                     botUpdates.Add(_botUpdates);
 
+                    var botUpdatesJson = JsonConvert.SerializeObject(_botUpdates);
+
+                    System.IO.File.WriteAllText(fileName, botUpdatesJson);
                 }
             }
         }
